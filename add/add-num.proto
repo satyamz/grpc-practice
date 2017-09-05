@@ -1,0 +1,17 @@
+syntax = "proto3";
+package addition;
+
+message Numbers {
+    int64 number1 = 1;
+    int64 number2 = 2;
+}
+
+message Addition {
+    //addtion holds addition
+    int64 addition = 1;
+}
+
+service Adder {
+    //Sends addition of two numbers
+    rpc Add (Numbers) returns (Addition) {};
+}
